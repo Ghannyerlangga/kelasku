@@ -1,3 +1,4 @@
+import 'package:belajar_asyik/Dashboard/dashboard.dart';
 import 'package:belajar_asyik/Register/register.dart';
 import 'package:belajar_asyik/Reset/reset.dart';
 import 'package:belajar_asyik/components/rounded_button.dart';
@@ -82,7 +83,12 @@ class Body extends StatelessWidget {
                         children: [
                           RoundedButton(
                             text: "Masuk",
-                            press: () {},
+                            press: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return HomePage();
+                              }));
+                            },
                           )
                         ],
                       ),
