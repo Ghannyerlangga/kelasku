@@ -86,7 +86,7 @@ class Body extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return HomePage();
+                                return Dashboard();
                               }));
                             },
                           )

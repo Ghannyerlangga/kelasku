@@ -11,6 +11,6 @@ BottomNavigationBarItem navBarItem(String title, Widget icon, Size size) {
       ),
       title: new Text(
         title,
-        style: new TextStyle(fontSize: 15),
+        style: new TextStyle(fontSize: 12),
       ));
 }
