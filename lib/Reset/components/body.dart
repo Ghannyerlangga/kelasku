@@ -14,12 +14,12 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(left: size.width * 0.04),
+              margin: EdgeInsets.only(left: size.width * 0.1),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
-                    "asset/img/maskot_kepala.png",
+                    "asset/img/reset_maskot.png",
                     height: size.height * 0.2,
                   ),
                 ],
@@ -31,14 +31,16 @@ class Body extends StatelessWidget {
                   Radius.circular(20),
                 ),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  // height: MediaQuery.of(context).size.height * 0.45,
                   width: MediaQuery.of(context).size.width * 0.8,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding: EdgeInsets.only(
-                        left: size.width * 0.05, right: size.width * 0.08),
+                        left: size.width * 0.05,
+                        right: size.width * 0.05,
+                        bottom: size.height * 0.02),
                     child: Column(
                       children: <Widget>[
                         Container(
