@@ -77,6 +77,18 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                                       fontSize: size.height * 0.05,
                                       fontWeight: FontWeight.bold)),
                             ),
+                            SizedBox(height: size.height * 0.03),
+                            Container(
+                              child: RoundedInputField(
+                                hintText: "Username",
+                                onChanged: (value) {},
+                              ),
+                            ),
+                            Container(
+                              child: RoundedPasswordField(
+                                onChanged: (value) {},
+                              ),
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
