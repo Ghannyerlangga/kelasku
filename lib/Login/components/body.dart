@@ -1,3 +1,4 @@
+import 'package:belajar_asyik/Dashboard/dashboard.dart';
 import 'package:belajar_asyik/Register/register.dart';
 import 'package:belajar_asyik/Reset/reset.dart';
 import 'package:belajar_asyik/components/rounded_button.dart';
@@ -75,19 +76,6 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                                   style: TextStyle(
                                       fontSize: size.height * 0.05,
                                       fontWeight: FontWeight.bold)),
-                            ),
-                            FaIcon(FontAwesomeIcons.bullhorn),
-                            SizedBox(height: size.height * 0.03),
-                            Container(
-                              child: RoundedInputField(
-                                hintText: "Username",
-                                onChanged: (value) {},
-                              ),
-                            ),
-                            Container(
-                              child: RoundedPasswordField(
-                                onChanged: (value) {},
-                              ),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
