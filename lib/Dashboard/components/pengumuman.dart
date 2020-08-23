@@ -6,6 +6,7 @@ class PengumumanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(
             left: size.width * 0.06,

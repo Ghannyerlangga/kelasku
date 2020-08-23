@@ -36,7 +36,7 @@ class _PelajaranPageState extends State<PelajaranPage> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                     image: AssetImage(
-                      "asset/img/maskot_kepala.png",
+                      "asset/img/log_reg_maskot.png",
                     ),
                   )),
                 )

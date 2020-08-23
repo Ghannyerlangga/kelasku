@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: fieldColor,
+      backgroundColor: Colors.white,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
                         image: AssetImage(
-                          "asset/img/maskot_kepala.png",
+                          "asset/img/log_reg_maskot.png",
                         ),
                       )),
                 )
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                           image: AssetImage(
-                            "asset/img/maskot_kepala.png",
+                            "asset/img/log_reg_maskot.png",
                           ),
                         )),
                       ),

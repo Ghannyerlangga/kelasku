@@ -6,7 +6,6 @@ import 'package:belajar_asyik/components/rounded_input_field.dart';
 import 'package:belajar_asyik/components/rounded_password_field.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'background.dart';
 
 class Body extends StatefulWidget {
@@ -44,9 +43,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
               children: <Widget>[
                 Transform(
                   transform: Matrix4.translationValues(
-                      delayedAnimation.value * size.width, 0.0, 0.0),
+                      animation.value * size.width, 0.0, 0.0),
                   child: Image.asset(
-                    "asset/img/log_reg_maskot.png",
+                    "asset/img/login_maskot.png",
                     height: size.height * 0.2,
                   ),
                 ),
@@ -114,7 +113,12 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                               children: [
                                 RoundedButton(
                                   text: "Masuk",
-                                  press: () {},
+                                  press: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Dashboard();
+                                    }));
+                                  },
                                 )
                               ],
                             ),

@@ -1,3 +1,4 @@
+import 'package:belajar_asyik/Dashboard/components/isi_pelajaran.dart';
 import 'package:belajar_asyik/Dashboard/components/navbar_item.dart';
 import 'package:belajar_asyik/Dashboard/components/home.dart';
 import 'package:belajar_asyik/Dashboard/components/profile.dart';
@@ -6,6 +7,8 @@ import 'package:belajar_asyik/Dashboard/components/pengumuman.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'components/drawer_option.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -69,55 +72,79 @@ class _DashboardPageState extends State<Dashboard> {
                             )))),
               ),
               Divider(),
-              drawerItem("Beranda", Icons.home, Colors.blue),
+              // drawerItem("Beranda", Icons.home, Colors.blue, () {}),
+              DrawerOption(
+                icon: Icons.home,
+                title: "Beranda",
+                onTap: () {},
+              ),
               ExpansionTile(
-                leading:
-                    Icon(Icons.add_to_home_screen, color: Colors.purple[200]),
-                title:
-                    Text("Kelas", style: TextStyle(color: Colors.purple[200])),
+                leading: Icon(Icons.add_to_home_screen, color: kBgColor),
+                title: Text("Kelas", style: TextStyle(color: kBgColor)),
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.2),
-                    child: ListTile(
-                      title: Text("Kelas 1",
-                          style: TextStyle(color: Colors.purple[200])),
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 1",
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.2),
-                    child: ListTile(
-                      title: Text("Kelas 2",
-                          style: TextStyle(color: Colors.purple[200])),
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 2",
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.2),
-                    child: ListTile(
-                      title: Text("Kelas 3",
-                          style: TextStyle(color: Colors.purple[200])),
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 3",
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.2),
-                    child: ListTile(
-                      title: Text("Kelas 5",
-                          style: TextStyle(color: Colors.purple[200])),
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 4",
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.2),
-                    child: ListTile(
-                      title: Text("Kelas 6",
-                          style: TextStyle(color: Colors.purple[200])),
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 5",
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: size.width * 0.1),
+                    child: DrawerOption(
+                      title: "Kelas 6",
                     ),
                   ),
                 ],
               ),
-              drawerItem("Kalender", Icons.calendar_today, Colors.pink[200]),
-              drawerItem("E-Rapor", Icons.star, Colors.orange),
-              drawerItem("E-Book", Icons.book, Colors.green),
-              drawerItem("Permainan", Icons.gamepad, Colors.amber),
-              drawerItem("Pengaturan", Icons.settings, Colors.black)
+              DrawerOption(
+                icon: Icons.calendar_today,
+                title: "Kalender",
+                onTap: () {},
+              ),
+              DrawerOption(
+                icon: Icons.star,
+                title: "E-Rapor",
+                onTap: () {},
+              ),
+              DrawerOption(
+                icon: Icons.book,
+                title: "E-Book",
+                onTap: () {},
+              ),
+              DrawerOption(
+                icon: Icons.gamepad,
+                title: "Permainan",
+                onTap: () {},
+              ),
+              DrawerOption(
+                icon: Icons.settings,
+                title: "Pengaturan",
+                onTap: () {},
+              ),
             ],
           ),
           color: fieldColor,
@@ -157,20 +184,6 @@ class _DashboardPageState extends State<Dashboard> {
             });
           },
         ),
-      ),
-    );
-  }
-
-  Widget drawerItem(String title, IconData icon, Color color) {
-    return ListTile(
-      enabled: true,
-      leading: Icon(
-        icon,
-        color: color,
-      ),
-      title: Text(
-        title,
-        style: TextStyle(color: color),
       ),
     );
   }

@@ -2,10 +2,19 @@ import 'package:belajar_asyik/Login/login.dart';
 import 'package:belajar_asyik/components/rounded_button.dart';
 import 'package:belajar_asyik/components/rounded_input_field.dart';
 import 'package:belajar_asyik/components/rounded_password_field.dart';
+import 'package:belajar_asyik/components/text_field_container.dart';
+import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
 import 'background.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String choice = "SD N 1 SKA";
+  List _sekolah = ["SD N 1 SKA", "SD N 2 SKH"];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -15,7 +24,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              "asset/img/log_reg_maskot.png",
+              "asset/img/daftar_maskot.png",
               height: size.height * 0.2,
             ),
             Container(
@@ -50,22 +59,56 @@ class Body extends StatelessWidget {
                           onChanged: (value) {},
                         ),
                         RoundedInputField(
+                          icon: Icons.dialpad,
+                          hintText: "NISN",
+                          onChanged: (value) {},
+                        ),
+                        TextFieldContainer(
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                margin:
+                                    EdgeInsets.only(right: size.width * 0.04),
+                                child: Icon(
+                                  Icons.school,
+                                  color: kBgColor,
+                                ),
+                              ),
+                              Container(
+                                width: size.width * 0.45,
+                                child: DropdownButtonHideUnderline(
+                                  child: DropdownButton(
+                                    hint: Text(choice),
+                                    value: choice,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        choice = value;
+                                      });
+                                    },
+                                    items: _sekolah.map((value) {
+                                      return DropdownMenuItem(
+                                        value: value,
+                                        child: Text(value),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        RoundedInputField(
+                          hintText: "Email",
+                          onChanged: (value) {},
+                          icon: Icons.email,
+                        ),
+                        RoundedInputField(
                           hintText: "Username",
                           onChanged: (value) {},
                           icon: Icons.person_outline,
                         ),
-                        RoundedInputField(
-                          hintText: "Email/No.Hp",
-                          onChanged: (value) {},
-                          icon: Icons.email,
-                        ),
                         RoundedPasswordField(
                           onChanged: (value) {},
-                        ),
-                        RoundedInputField(
-                          hintText: "Nama Sekolah",
-                          onChanged: (value) {},
-                          icon: Icons.school,
                         ),
                         SizedBox(height: size.height * 0.03),
                         Row(
