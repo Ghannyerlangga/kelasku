@@ -1,8 +1,5 @@
-import 'package:belajar_asyik/Dashboard/components/pengumuman.dart';
 import 'package:belajar_asyik/Login/login.dart';
-import 'package:belajar_asyik/Quiz/quiz.dart';
 import 'package:flutter/material.dart';
-import 'package:belajar_asyik/Kelas/pilih_kelas.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,17 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-<<<<<<< HEAD
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           canvasColor: Colors.transparent),
       home: LoginPage(),
-=======
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: QuizPage(),
->>>>>>> dashboard
     );
   }
 }

@@ -1,15 +1,10 @@
-import 'package:belajar_asyik/Dashboard/components/isi_pelajaran.dart';
 import 'package:belajar_asyik/Dashboard/components/navbar_item.dart';
 import 'package:belajar_asyik/Dashboard/components/home.dart';
 import 'package:belajar_asyik/Dashboard/components/profile.dart';
-import 'package:belajar_asyik/Dashboard/components/pengumuman.dart';
-import 'package:belajar_asyik/EBook/ebook.dart';
 import 'package:belajar_asyik/Kelas/pilih_kelas.dart';
 import 'package:belajar_asyik/Rapor/raport.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'components/drawer_option.dart';
 
 class Dashboard extends StatefulWidget {
