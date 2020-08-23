@@ -19,6 +19,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       //   backgroundColor: Colors.transparent,
       //   elevation: 0,
       // ),
+      backgroundColor: pageColor,
       body: Padding(
         padding: EdgeInsets.only(top: padding),
         child: Stack(
