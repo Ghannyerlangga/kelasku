@@ -48,8 +48,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+<<<<<<< HEAD
     - asset/img/
     
+=======
+    - asset/img/maskot_kepala.png
+    - asset/img/banner_pilih_kelas.png
+    - asset/img/log_reg_maskot.png
+>>>>>>> dashboard
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

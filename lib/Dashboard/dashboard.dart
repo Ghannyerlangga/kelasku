@@ -2,8 +2,10 @@ import 'package:belajar_asyik/Dashboard/components/isi_pelajaran.dart';
 import 'package:belajar_asyik/Dashboard/components/navbar_item.dart';
 import 'package:belajar_asyik/Dashboard/components/home.dart';
 import 'package:belajar_asyik/Dashboard/components/profile.dart';
-import 'package:belajar_asyik/Dashboard/components/semester.dart';
 import 'package:belajar_asyik/Dashboard/components/pengumuman.dart';
+import 'package:belajar_asyik/EBook/ebook.dart';
+import 'package:belajar_asyik/Kelas/pilih_kelas.dart';
+import 'package:belajar_asyik/Rapor/raport.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,7 +23,7 @@ class _DashboardPageState extends State<Dashboard> {
   int _value = 1;
 
   List _children = [
-    PengumumanPage(),
+    PilihKelasPage(),
     HomePage(),
     Center(
       child: Text("Games"),
@@ -78,48 +80,7 @@ class _DashboardPageState extends State<Dashboard> {
                 title: "Beranda",
                 onTap: () {},
               ),
-              ExpansionTile(
-                leading: Icon(Icons.add_to_home_screen, color: kBgColor),
-                title: Text("Kelas", style: TextStyle(color: kBgColor)),
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 1",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 2",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 3",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 4",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 5",
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: size.width * 0.1),
-                    child: DrawerOption(
-                      title: "Kelas 6",
-                    ),
-                  ),
-                ],
-              ),
+
               DrawerOption(
                 icon: Icons.calendar_today,
                 title: "Kalender",
@@ -128,7 +89,11 @@ class _DashboardPageState extends State<Dashboard> {
               DrawerOption(
                 icon: Icons.star,
                 title: "E-Rapor",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return RaporPage();
+                  }));
+                },
               ),
               DrawerOption(
                 icon: Icons.book,

@@ -1,4 +1,4 @@
-import 'package:belajar_asyik/Kelas/components/body.dart';
+import 'package:belajar_asyik/Kelas/body.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
 
