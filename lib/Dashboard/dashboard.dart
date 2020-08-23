@@ -131,7 +131,7 @@ class _DashboardPageState extends State<Dashboard> {
                       _scaffoldKey.currentState.openDrawer();
                     }),
                 size),
-            navBarItem("Notifikasi", Icon(Icons.notifications_active), size),
+            navBarItem("Kelas", Icon(Icons.class_), size),
             navBarItem("Home", Icon(Icons.home), size),
             navBarItem("Game", Icon(Icons.gamepad), size),
             navBarItem("Profile", Icon(Icons.person), size),

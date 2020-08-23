@@ -10,6 +10,7 @@ class ProfilePage extends StatelessWidget {
     double padding = size.height * 0.03;
     TextStyle _pDataStyle = TextStyle(fontSize: size.width * 0.04);
     return Scaffold(
+      backgroundColor: pageColor,
       body: Container(
         padding: EdgeInsets.only(
             top: size.width * 0.05,
