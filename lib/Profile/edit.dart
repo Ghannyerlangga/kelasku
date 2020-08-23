@@ -44,7 +44,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
                                           image: AssetImage(
-                                        "asset/img/maskot_kepala.png",
+                                        "asset/img/login_maskot.png",
                                       )),
                                       shape: BoxShape.circle),
                                 ),

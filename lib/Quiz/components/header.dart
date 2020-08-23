@@ -33,7 +33,7 @@ class Header extends StatelessWidget {
                     height: size.height * 0.05,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("asset/img/maskot_kepala.png")),
+                          image: AssetImage("asset/img/login_maskot.png")),
                     ))
               ],
             )
