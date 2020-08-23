@@ -23,39 +23,42 @@ class PengumumanPage extends StatelessWidget {
                 ),
               ],
             ),
-            Divider(
+            SizedBox(
               height: size.height * 0.05,
-              thickness: size.width * 0.003,
-              color: kBgColor,
             ),
             SingleChildScrollView(
               child: Container(
+                padding: EdgeInsets.only(
+                    left: size.height * 0.01,
+                    top: size.height * 0.025,
+                    bottom: size.height * 0.025),
+                child: Center(
+                  child: Text(
+                    "Ayo kerjakan PR Matematikamu bersama Bidi, sisa waktu pengumpulan tinggal 1 hari lagi, lho!",
+                    style: TextStyle(
+                        fontSize: size.height * 0.02, color: kBgColor),
+                  ),
+                ),
                 width: size.width,
-                height: size.height * 0.15,
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    border: Border(
+                      bottom: BorderSide(
+                        //                   <--- left side
+                        color: kBgColor,
+                        width: 1.0,
+                      ),
+                      top: BorderSide(
+                        //                    <--- top side
+                        color: kBgColor,
+                        width: 1.0,
+                      ),
+                    )),
               ),
             ),
-            Divider(
+            Container(
               height: size.height * 0.02,
-              thickness: size.width * 0.003,
-              color: kBgColor,
             ),
-            SingleChildScrollView(
-              child: Container(
-                width: size.width,
-                height: size.height * 0.15,
-              ),
-            ),
-            Divider(
-              height: size.height * 0.02,
-              thickness: size.width * 0.003,
-              color: kBgColor,
-            ),
-            SingleChildScrollView(
-              child: Container(
-                width: size.width,
-                height: size.height * 0.15,
-              ),
-            )
           ],
         ),
       ),

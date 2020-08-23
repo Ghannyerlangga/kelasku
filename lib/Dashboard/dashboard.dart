@@ -1,8 +1,8 @@
 import 'package:belajar_asyik/Dashboard/components/navbar_item.dart';
 import 'package:belajar_asyik/Dashboard/components/home.dart';
 import 'package:belajar_asyik/Dashboard/components/profile.dart';
-import 'package:belajar_asyik/Dashboard/components/semester.dart';
 import 'package:belajar_asyik/Dashboard/components/pengumuman.dart';
+import 'package:belajar_asyik/EBook/ebook.dart';
 import 'package:belajar_asyik/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -69,7 +69,7 @@ class _DashboardPageState extends State<Dashboard> {
                             )))),
               ),
               Divider(),
-              drawerItem("Beranda", Icons.home, Colors.blue),
+              drawerItem("Beranda", Icons.home, Colors.blue, Dashboard()),
               ExpansionTile(
                 leading:
                     Icon(Icons.add_to_home_screen, color: Colors.purple[200]),
@@ -113,11 +113,13 @@ class _DashboardPageState extends State<Dashboard> {
                   ),
                 ],
               ),
-              drawerItem("Kalender", Icons.calendar_today, Colors.pink[200]),
-              drawerItem("E-Rapor", Icons.star, Colors.orange),
-              drawerItem("E-Book", Icons.book, Colors.green),
-              drawerItem("Permainan", Icons.gamepad, Colors.amber),
-              drawerItem("Pengaturan", Icons.settings, Colors.black)
+              drawerItem("Kalender", Icons.calendar_today, Colors.pink[200],
+                  Dashboard()),
+              drawerItem("E-Rapor", Icons.star, Colors.orange, Dashboard()),
+              drawerItem("E-Book", Icons.book, Colors.green, EbookPage()),
+              drawerItem("Permainan", Icons.gamepad, Colors.amber, Dashboard()),
+              drawerItem(
+                  "Pengaturan", Icons.settings, Colors.black, Dashboard())
             ],
           ),
           color: fieldColor,
@@ -161,7 +163,7 @@ class _DashboardPageState extends State<Dashboard> {
     );
   }
 
-  Widget drawerItem(String title, IconData icon, Color color) {
+  Widget drawerItem(String title, IconData icon, Color color, Widget page) {
     return ListTile(
       enabled: true,
       leading: Icon(
@@ -172,6 +174,12 @@ class _DashboardPageState extends State<Dashboard> {
         title,
         style: TextStyle(color: color),
       ),
+      onTap: () {
+        Navigator.pop(context);
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return page;
+        }));
+      },
     );
   }
 }
